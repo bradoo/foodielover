@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>My Todo App</title>
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" href="node_modules/jquery-datetimepicker/build/jquery.datetimepicker.min.css">
+    <link rel="stylesheet" href="css/base.css">
+ 	<!-- <script type="text/javascript" src="js/jquery/jquery-2.2.1.min.js"></script>  
+    <script type="text/javascript" src="js/jquery/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery.tablesorter.js"></script> -->
+</head>
+<body>
+
+<div class="container">
+    <h1>My Food</h1>
+    <form class="add-task">
+        <input name="content"
+               type="text"
+               placeholder="e.g.post your food……"
+               autofocus
+               autocomplete="off"
+        >
+        <button id="foodsubmit" type="submit">Submit</button>
+    </form>
+    <div id="tabs">
+        <ul>
+            <li class="on">Breakfast</li>
+            <li >Brunch</li>
+            <li >Afternoon Tea</li>
+            <li >Dinner</li>
+
+        </ul>
+        <div class="task-list "></div>
+
+        <!--<div class="Breakfast-task-list "></div>-->
+        <div class="Brunch-task-list hide">
+            <div class="task-item">
+                <span><input type="checkbox"></span>
+                <span class="task-content">Brunch-task-list</span>
+                <span>delete</span>
+                <span>detail</span>
+            </div>
+        </div>
+        <div class="afternoon-task-list hide">
+            <div class="task-item">
+                <span><input type="checkbox"></span>
+                <span class="task-content">afternoon-task-list</span>
+                <span>delete</span>
+                <span>detail</span>
+            </div>
+        </div>
+        <div class="dinner-task-list hide">
+            <div class="task-item">
+                <span><input type="checkbox"></span>
+                <span class="task-content">dinner-task-list</span>
+                <span>delete</span>
+                <span>detail</span>
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+    <div class="task-detail-mask">
+    </div>
+    <div class="task-detail">
+    </div>
+
+
+
+</div>
+<script src="js/config.js"></script>
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script src="node_modules/store/store.js"></script>
+<script src="node_modules/jquery-datetimepicker/build/jquery.datetimepicker.full.js"></script>
+<script src="js/data/demo-data.js"></script>
+<script src="js/food.js"></script>
+<script type="application/javascript">
+    food.init({
+        food:local_DataBase.food
+
+    });
+
+</script>
+</body>
+
+</html>
